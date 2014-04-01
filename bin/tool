@@ -4,10 +4,10 @@
 #
 # Environment Variables
 #
-#   EILFEDWEB_HEAPSIZE  The maximum amount of heap to use, in MB. 
+#   BROKER_HEAPSIZE  The maximum amount of heap to use, in MB. 
 #                   Default is 1024.
 #
-#   EILFEDWEB_OPTS      Extra Java runtime option.
+#   BROKER_OPTS      Extra Java runtime option.
 #
 
 # resolve links - $0 may be a softlink
@@ -40,10 +40,10 @@ shift
 
 # some directories
 THIS_DIR=`dirname "$THIS"`
-EILFEDWEB_HOME=`cd "$THIS_DIR/.." ; pwd`
+BROKER_HOME=`cd "$THIS_DIR/.." ; pwd`
 
-if [ -f "${EILFEDWEB_HOME}/conf/gora-env.sh" ]; then
-  . "${EILFEDWEB_HOME}/conf/gora-env.sh"
+if [ -f "${BROKER_HOME}/conf/gora-env.sh" ]; then
+  . "${BROKER_HOME}/conf/gora-env.sh"
 fi
 
 if [ "$JAVA_HOME" = "" ]; then
@@ -55,14 +55,14 @@ JAVA=$JAVA_HOME/bin/java
 JAVA_HEAP_MAX=-Xmx1024m 
 
 # check envvars which might override default args
-if [ "$EILFEDWEB_HEAPSIZE" != "" ]; then
-  #echo "run with heapsize $EILFEDWEB_HEAPSIZE"
-  JAVA_HEAP_MAX="-Xmx""$EILFEDWEB_HEAPSIZE""m"
+if [ "$BROKER_HEAPSIZE" != "" ]; then
+  #echo "run with heapsize $BROKER_HEAPSIZE"
+  JAVA_HEAP_MAX="-Xmx""$BROKER_HEAPSIZE""m"
   #echo $JAVA_HEAP_MAX
 fi
 
-# CLASSPATH initially contains $EILFEDWEB_CONF_DIR, or defaults to $EILFEDWEB_HOME/conf
-CLASSPATH=${EILFEDWEB_CONF_DIR:=$EILFEDWEB_HOME/conf}
+# CLASSPATH initially contains $BROKER_CONF_DIR, or defaults to $BROKER_HOME/conf
+CLASSPATH=${BROKER_CONF_DIR:=$BROKER_HOME/conf}
 CLASSPATH=${CLASSPATH}:$JAVA_HOME/lib/tools.jar
 
 # so that filenames w/ spaces are handled correctly in loops below
@@ -72,29 +72,29 @@ IFS=
 unset IFS
 
 # default log directory & file
-if [ "$EILFEDWEB_LOG_DIR" = "" ]; then
-  EILFEDWEB_LOG_DIR="$EILFEDWEB_HOME/logs"
+if [ "$BROKER_LOG_DIR" = "" ]; then
+  BROKER_LOG_DIR="$BROKER_HOME/logs"
 fi
-if [ "$EILFEDWEB_LOGFILE" = "" ]; then
-  EILFEDWEB_LOGFILE='gora.log'
+if [ "$BROKER_LOGFILE" = "" ]; then
+  BROKER_LOGFILE='gora.log'
 fi
 
 if [ "x$JAVA_LIBRARY_PATH" != "x" ]; then
   JAVA_OPTS="$JAVA_OPTS -Djava.library.path=$JAVA_LIBRARY_PATH"
 fi
 
-#EILFEDWEB_OPTS="$EILFEDWEB_OPTS -Dhadoop.log.dir=$EILFEDWEB_LOG_DIR"
-#EILFEDWEB_OPTS="$EILFEDWEB_OPTS -Dhadoop.log.file=$EILFEDWEB_LOGFILE"
+#BROKER_OPTS="$BROKER_OPTS -Dhadoop.log.dir=$BROKER_LOG_DIR"
+#BROKER_OPTS="$BROKER_OPTS -Dhadoop.log.file=$BROKER_LOGFILE"
 
 # figure out which class to run
 if [ "$COMMAND" = "goracompiler" ] ; then
   MODULE=lib
-  CLASSPATH=$CLASSPATH:$EILFEDWEB_HOME/$MODULE/
+  CLASSPATH=$CLASSPATH:$BROKER_HOME/$MODULE/
   CLASS=org.apache.gora.compiler.GoraCompiler
 elif [ "$COMMAND" = "querymanager" ] ; then
   MODULE=target
-  CLASSPATH=$CLASSPATH:$EILFEDWEB_HOME/$MODULE/classes/
-  CLASS=edu.stanford.eil.query.QueryManager
+  CLASSPATH=$CLASSPATH:$BROKER_HOME/$MODULE/classes/
+  CLASS=org.lewismc.query.QueryManager
 else
   MODULE="$COMMAND"
   CLASS=$1
@@ -104,21 +104,21 @@ fi
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 # add libs to CLASSPATH
-for f in $EILFEDWEB_HOME/lib/*.jar; do
+for f in $BROKER_HOME/lib/*.jar; do
   CLASSPATH=${CLASSPATH}:$f;
 done
 
-for f in $EILFEDWEB_HOME/target/*.jar; do
+for f in $BROKER_HOME/target/*.jar; do
   CLASSPATH=${CLASSPATH}:$f;
 done
 IFS=$SAVEIFS
 
-CLASSPATH=${CLASSPATH}:$EILFEDWEB_HOME/$MODULE/target/classes/
-CLASSPATH=${CLASSPATH}:$EILFEDWEB_HOME/$MODULE/target/test-classes/
+CLASSPATH=${CLASSPATH}:$BROKER_HOME/$MODULE/target/classes/
+CLASSPATH=${CLASSPATH}:$BROKER_HOME/$MODULE/target/test-classes/
 
-CLASSPATH=${CLASSPATH}:$EILFEDWEB_HOME/conf
+CLASSPATH=${CLASSPATH}:$BROKER_HOME/conf
 #Can be used if we add more modules ar a later date
-#CLASSPATH=${CLASSPATH}:$EILFEDWEB_HOME/$MODULE/conf
+#CLASSPATH=${CLASSPATH}:$BROKER_HOME/$MODULE/conf
 
 # run it
-exec "$JAVA" $JAVA_HEAP_MAX $JAVA_OPTS $EILFEDWEB_OPTS -classpath "$CLASSPATH" $CLASS "$@"
+exec "$JAVA" $JAVA_HEAP_MAX $JAVA_OPTS $BROKER_OPTS -classpath "$CLASSPATH" $CLASS "$@"

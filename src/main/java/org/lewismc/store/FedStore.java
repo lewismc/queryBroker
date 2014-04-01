@@ -16,7 +16,7 @@
  *limitations under the License.
  */
 
-package edu.stanford.eil.store;
+package org.lewismc.store;
 
 import java.nio.ByteBuffer;
 import java.util.Map;
@@ -41,7 +41,7 @@ import org.apache.gora.persistency.ListGenericArray;
 
 @SuppressWarnings("all")
 public class FedStore extends PersistentBase {
-  public static final Schema _SCHEMA = Schema.parse("{\"type\":\"record\",\"name\":\"FedStore\",\"namespace\":\"edu.stanford.eil.store\",\"fields\":[{\"name\":\"trecSearchEngineNameId\",\"type\":\"string\"},{\"name\":\"trecSearchEngineName\",\"type\":\"string\"},{\"name\":\"trecSearchEngineURL\",\"type\":\"string\"},{\"name\":\"dictionaryMap\",\"type\":{\"type\":\"map\",\"values\":\"string\"}}]}");
+  public static final Schema _SCHEMA = Schema.parse("{\"type\":\"record\",\"name\":\"FedStore\",\"namespace\":\"org.lewismc.store\",\"fields\":[{\"name\":\"trecSearchEngineNameId\",\"type\":\"string\"},{\"name\":\"trecSearchEngineName\",\"type\":\"string\"},{\"name\":\"trecSearchEngineURL\",\"type\":\"string\"},{\"name\":\"dictionaryMap\",\"type\":{\"type\":\"map\",\"values\":\"string\"}}]}");
   public static enum Field {
     TREC_SEARCH_ENGINE_NAME_ID(0,"trecSearchEngineNameId"),
     TREC_SEARCH_ENGINE_NAME(1,"trecSearchEngineName"),

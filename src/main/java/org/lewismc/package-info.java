@@ -6,4 +6,4 @@
  * @author lewismc
  *
  */
-package edu.stanford.eil;
+package org.lewismc;

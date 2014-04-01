@@ -16,7 +16,7 @@
  *limitations under the License.
  */
 
-package edu.stanford.eil.store;
+package org.lewismc.store;
 
 import java.nio.ByteBuffer;
 import java.util.Map;
@@ -41,7 +41,7 @@ import org.apache.gora.persistency.ListGenericArray;
 
 @SuppressWarnings("all")
 public class DataStore extends PersistentBase {
-  public static final Schema _SCHEMA = Schema.parse("{\"type\":\"record\",\"name\":\"DataStore\",\"namespace\":\"edu.stanford.eil.store\",\"fields\":[{\"name\":\"goraDataStoreName\",\"type\":\"string\"},{\"name\":\"nativeDataStoreName\",\"type\":\"string\"},{\"name\":\"location\",\"type\":\"string\"},{\"name\":\"version\",\"type\":\"string\"},{\"name\":\"dataSize\",\"type\":\"long\"},{\"name\":\"numberOfDocs\",\"type\":\"int\"},{\"name\":\"dictionaryMap\",\"type\":{\"type\":\"map\",\"values\":\"string\"}},{\"name\":\"contentType\",\"type\":\"string\"}]}");
+  public static final Schema _SCHEMA = Schema.parse("{\"type\":\"record\",\"name\":\"DataStore\",\"namespace\":\"org.lewismc.store\",\"fields\":[{\"name\":\"goraDataStoreName\",\"type\":\"string\"},{\"name\":\"nativeDataStoreName\",\"type\":\"string\"},{\"name\":\"location\",\"type\":\"string\"},{\"name\":\"version\",\"type\":\"string\"},{\"name\":\"dataSize\",\"type\":\"long\"},{\"name\":\"numberOfDocs\",\"type\":\"int\"},{\"name\":\"dictionaryMap\",\"type\":{\"type\":\"map\",\"values\":\"string\"}},{\"name\":\"contentType\",\"type\":\"string\"}]}");
   public static enum Field {
     GORA_DATA_STORE_NAME(0,"goraDataStoreName"),
     NATIVE_DATA_STORE_NAME(1,"nativeDataStoreName"),

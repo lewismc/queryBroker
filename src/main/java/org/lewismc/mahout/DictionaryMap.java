@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.stanford.eil.mahout;
+package org.lewismc.mahout;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,10 +18,9 @@ import org.apache.mahout.math.NamedVector;
 import org.apache.mahout.math.RandomAccessSparseVector;
 import org.apache.mahout.math.Vector.Element;
 import org.apache.mahout.math.VectorWritable;
+import org.lewismc.store.FedStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import edu.stanford.eil.store.FedStore;
 
 
 /**

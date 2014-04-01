@@ -1,6 +1,6 @@
 {"name": "DataStore",
  "type": "record",
- "namespace": "edu.stanford.eil.store",
+ "namespace": "org.lewismc.store",
  "fields": [
         {"name": "goraDataStoreName", "type": "string"}, 
         {"name": "nativeDataStoreName", "type": "string"},

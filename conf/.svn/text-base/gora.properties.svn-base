@@ -1,3 +1,0 @@
-gora.datastore.default=org.apache.gora.cassandra.store.CassandraStore
-gora.cassandraStore.cluster=Test Cluster
-gora.cassandraStore.host=localhost

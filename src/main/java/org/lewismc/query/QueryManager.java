@@ -1,11 +1,10 @@
 /**
  * 
  */
-package edu.stanford.eil.query;
+package org.lewismc.query;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,16 +12,14 @@ import java.io.PrintWriter;
 import java.text.ParseException;
 import java.util.StringTokenizer;
 
-
 import org.apache.avro.util.Utf8;
 import org.apache.gora.query.Query;
 import org.apache.gora.query.Result;
 import org.apache.gora.store.DataStore;
 import org.apache.gora.store.DataStoreFactory;
 import org.apache.hadoop.conf.Configuration;
-import edu.stanford.eil.store.FedStore;
-import edu.stanford.eil.util.TRECQuery;
-
+import org.lewismc.store.FedStore;
+import org.lewismc.util.TRECQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

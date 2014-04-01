@@ -1,13 +1,13 @@
 /**
  * 
  */
-package edu.stanford.eil.util;
+package org.lewismc.util;
 
 import java.util.HashMap;
 
 /**
  * Utility class specifically restricting the queries which can be
- * executed to the {@link edu.stanford.eil.query.QueryManager}
+ * executed to the {@link org.lewismc.query.QueryManager}
  * @author lewismc
  *
  */
@@ -16,12 +16,12 @@ public class TRECQuery {
 
   /**
    * Chosen trec query to be executed over the 
-   * {@link edu.stanford.eil.store.FedStore}
+   * {@link org.lewismc.store.FedStore}
    */
   private String trecQuery;
   
   /**
-   * Queries supported by {@link edu.stanford.eil.query.QueryManager}
+   * Queries supported by {@link org.lewismc.query.QueryManager}
    */
   private static final String supportedQueries[] = {"q7001", "q7002", "q7003", "q7004", "q7007", "q7008", "q7009", "q7010", "q7018", 
     "q7020", "q7023", "q7025", "q7026", "q7027", "q7029", "q7030", "q7031", "q7033", "q7034", "q7037", "q7039", "q7040", "q7042", "q7043", 

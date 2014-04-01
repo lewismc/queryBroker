@@ -1,6 +1,6 @@
 {"name": "FedStore",
  "type": "record",
- "namespace": "edu.stanford.eil.store",
+ "namespace": "org.lewismc.store",
  "fields": [
         {"name": "trecSearchEngineNameId", "type": "string"}, 
         {"name": "trecSearchEngineName", "type": "string"}, 

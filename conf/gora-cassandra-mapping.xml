@@ -4,7 +4,7 @@
     <!-- family name="sc" type="super" /-->
   </keyspace>
 
-  <class name="edu.stanford.eil.store.FedStore" keyClass="java.lang.String" keyspace="fedstore10">
+  <class name="org.lewismc.store.FedStore" keyClass="java.lang.String" keyspace="fedstore10">
     <field name="trecSearchEngineNameId"  family="a" qualifier="info:tid"/>
     <field name="trecSearchEngineName"  family="a" qualifier="info:tname"/>
     <field name="trecSearchEngineURL"  family="a" qualifier="info:turl"/>

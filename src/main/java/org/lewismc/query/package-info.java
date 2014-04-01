@@ -15,4 +15,4 @@
  * @author lewismc
  *
  */
-package edu.stanford.eil.query;
+package org.lewismc.query;

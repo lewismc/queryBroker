@@ -3,40 +3,31 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.stanford.eil</groupId>
-  <artifactId>eilfedweb</artifactId>
+  <groupId>org.lewismc</groupId>
+  <artifactId>querybroker</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>EILFedWeb</name>
+  <name>queryBroker</name>
   <description>Introducing a service broker for resource selection as part of improving federated web search</description>
   <packaging>jar</packaging>
   
   <licenses>
     <license>
-      <name></name>
-      <url></url>
+      <name>Apache Software License v2.0</name>
+      <url>http://www.apache.org/licenses/</url>
     </license>
   </licenses>
 
-  <organization>
-    <name>Stanford University</name>
-    <url>http://www.stanford.edu/</url>
-  </organization>
     
   <developers>
     <developer>
-      <id>ab</id>
+      <id>lewismc</id>
       <name>Lewis John McGibbney</name>
-      <email>lewis2 [at] stanford [dot] edu</email>
-      <roles>
-        <role>PostDoc Research Scholar</role>
-      </roles>
+      <email>lewismc [at] apache [dot] org</email>
     </developer>
   </developers>
 
   <scm>
-    <connection>scm:svn:https://eil.stanford.edu:443/svn/eil-repo/Users/Lewis/code/eilfedweb/</connection>
-    <developerConnection>scm:svn:http://eil.stanford.edu:443/svn/eil-repo/Users/Lewis/code/eilfedweb/</developerConnection>
-    <url>http://eil.stanford.edu:443/svn/eil-repo/Users/Lewis/code/eilfedweb/</url>
+    <url>https://github.com/lewismc/queryBroker</url>
   </scm>
   
   <repositories>

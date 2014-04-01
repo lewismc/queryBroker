@@ -8,4 +8,4 @@
  * @author lewismc
  *
  */
-package edu.stanford.eil.mahout;
+package org.lewismc.mahout;
