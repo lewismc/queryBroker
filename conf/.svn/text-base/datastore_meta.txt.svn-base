@@ -1,0 +1,5 @@
+#This is a metafile which effectively acts as the data we are going to push in to
+#the datastore for use my the QueryManager class.
+#trecSearchEngineName goraDataStoreName dataSize numberOfDocs dictionaryMap contentType
+#7001 Q0 FW13-e200 1 29.34 example13a
+

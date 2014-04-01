@@ -1,0 +1,14 @@
+{"name": "DataStore",
+ "type": "record",
+ "namespace": "edu.stanford.eil.store",
+ "fields": [
+        {"name": "goraDataStoreName", "type": "string"}, 
+        {"name": "nativeDataStoreName", "type": "string"},
+        {"name": "location", "type": "string"},
+        {"name": "version", "type": "string"},
+        {"name": "dataSize", "type": "long"},
+        {"name": "numberOfDocs", "type": "int"},
+        {"name": "dictionaryMap", "type": {"type": "map", "values": "string"}},
+        {"name": "contentType", "type": "string"}
+   ]
+}

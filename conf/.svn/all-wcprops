@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/eil-repo/!svn/ver/464/Users/Lewis/code/eilfedweb/conf
+END
+FW13-topics.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/eil-repo/!svn/ver/454/Users/Lewis/code/eilfedweb/conf/FW13-topics.txt
+END
+gora-cassandra-mapping.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/eil-repo/!svn/ver/464/Users/Lewis/code/eilfedweb/conf/gora-cassandra-mapping.xml
+END
+datastore.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/eil-repo/!svn/ver/414/Users/Lewis/code/eilfedweb/conf/datastore.avsc
+END
+gora.properties
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/eil-repo/!svn/ver/464/Users/Lewis/code/eilfedweb/conf/gora.properties
+END
+FW13-engines.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/eil-repo/!svn/ver/456/Users/Lewis/code/eilfedweb/conf/FW13-engines.txt
+END
+fedstore.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/eil-repo/!svn/ver/463/Users/Lewis/code/eilfedweb/conf/fedstore.avsc
+END
+datastore_meta.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/eil-repo/!svn/ver/463/Users/Lewis/code/eilfedweb/conf/datastore_meta.txt
+END
