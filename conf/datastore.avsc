@@ -1,14 +1,21 @@
-{"name": "DataStore",
+{"name": "DataStore", "default":null,
  "type": "record",
+ "doc": "Record containing Fields required to build a Query Broker",
  "namespace": "org.lewismc.store",
  "fields": [
-        {"name": "goraDataStoreName", "type": "string"}, 
-        {"name": "nativeDataStoreName", "type": "string"},
-        {"name": "location", "type": "string"},
-        {"name": "version", "type": "string"},
-        {"name": "dataSize", "type": "long"},
-        {"name": "numberOfDocs", "type": "int"},
-        {"name": "dictionaryMap", "type": {"type": "map", "values": "string"}},
-        {"name": "contentType", "type": "string"}
+   {"name": "goraDataStoreName", "type": ["null","string"], 
+          "default":null, "doc" : "The Gora DataStore reference"}, 
+   {"name": "nativeDataStoreName", "type": ["null","string"], 
+          "default":null, "doc" : "The native DataStore identifier"}, 
+   {"name": "_ipAddress", "type": ["null","string"], 
+          "default":null, "doc" : "The native DataStore IP Address"}, 
+   {"name": "nativeDataStoreVersion", "type": ["null","string"], 
+          "default":null, "doc" : "The native DataStore version"}, 
+   {"name": "dataSize", "type":"long",
+          "default":0, "doc" : "The data volume in this particular DataStore"}, 
+   {"name": "numberOfRecords", "type": "int", 
+          "default":0, "doc" : "The number of individual objects in this DataStore"}, 
+   {"name": "dictionaryMap", "type": {"type":"map", "values":"string"}, 
+          "default":{}, "doc" : "A Map contaning token --> tf-idf mappings"}
    ]
 }
